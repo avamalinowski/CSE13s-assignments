@@ -1,24 +1,22 @@
 CC = clang
-
-# You can use the strict compiler flags if you like -- it may help in debugging! 
 CFLAGS = -Wall -Wpedantic -Werror -Wextra
 
-all: hw1_test caat
+all: hw2_test calculator
 
-hw1_test: hw1_test.o hw1.o
-	$(CC) hw1.o hw1_test.o -o hw1_test
+hw2_test: hw2.o hw2_test.o
+	$(CC) hw2.o hw2_test.o -o hw2_test
 
-hw1_test.o: hw1_test.c hw1.h
-	$(CC) $(CFLAGS) -c hw1_test.c
+hw2.o: hw2.c hw2.h
+	$(CC) $(CFLAGS) -c hw2.c
 
-hw1.o: hw1.c hw1.h
-	$(CC) $(CFLAGS) -c hw1.c
+hw2_test.o: hw2_test.c hw2.h
+	$(CC) $(CFLAGS) -c hw2_test.c
 
-caat: caat.c
-	$(CC) $(CFLAGS) caat.c -o caat
+calculator: calculator.c
+	$(CC) $(CFLAGS) calculator.c -o ./calculator
 
 clean:
-	rm -f hw1_test caat *.o
+	rm -f calculator hw2_test hw2.o hw2_test.o
 
 format:
 	clang-format -i -style=file *.[ch]
