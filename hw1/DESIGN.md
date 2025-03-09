@@ -1,18 +1,14 @@
-//area of disk: will take the input given from the test code and use it in a function that will do pi * r^2, where pi
-// is taken from math.h. this function will return the variable A which is the area of the disk.
+Computing the next Collatz number: For this function I would do as the definition says and check to see whether the number is even or odd by dividing the number by 2 and if the remainder is 0 then return the number outputted. else, if the remainder is not 0 then do 3n + 1 and return that number.
 
-//area of ring: will probably call on the area of the disk function twice taking the outer radius of the disk, finding 
-the area and subtracting it from the area of the inner disk after using the radius to find it. then will return a
-variable containing the area of the ring.
+Counting Collatz steps to convergence: ill create a while loop that checks to see when the number is == 1 and when it's equal to 1 the loop will break and print how many times it went through the loop. To print this i will have a variable counting up
+every time the number goes through the loop. Furthermore, I will be applying the Collatz n/2 or 3n+1 to determine whether the number is even or odd. The while loop will have nested if statements. the return value will be how many times the number 
+looped.
 
-bigger minus smaller: will do simple comparator function using inputs (x,y) and determining if x > y, then
-x = big number, else y = big number then setting the other variable to = small number.
- Also checking to see if they are the same by doing if x == y (or something along the lines.), then doing
-big number - small number and returning that value
+Finding the maximum element of an array: my first maximum number will be arr[0] and after that I will do a comparison condition statement to see if arr[i] > arr[0]. if it is then I will change my highestnumber variable to be equal to that index of the array. to make sure i know the size of the array I will try to use sizeof and figure it out as I go :D
 
-value in range: checks to see if given value is greater than/equal to lower bound and less than/equal to upper bound, if so return true, else return false.
+summing all positive elements of an array: I will traverse my way through the array and test each number to check if its > 0, if it is then I will add it to a running total variable, if its not I will continue through the function, and at the end of the array I will return that variable as the sum of all positive elements in the array.
 
-sum of greater squares: will start by using nested if statements to see which number is smallest, then will square the second and first biggest numbers, add them together, and return that sum.
+counting negative numbers in an array: for this function I will traverse my way through the array and check to see if
+arr[i] < 0, if it is then I will add 1 to a counter variable, if arr[i] is not < 0 then I will skip and continue. At the end of the array I will return the counter variable to tell how many negative numbers there were in the array.
 
-caat.c: follow what you did in class using getchar() and assigning it to a variable and determining if the character 
-is aeiouAEIOU and if it is then printing the variable in which the getchar() is assigned to, if its not aeiouAEIOU then continuing until the next vowel or EOF. 
+Calculator program: I will make sure to use the switch function to jump to the correct operator symbol in order to add,subtract,divide,multiply the numbers. I will use getchar() to detect the numbers and set two variables == to the first and second number and delete the \n to not break the program. Then I will use switch to detect operators and then perform the operations. for equations longer than num + num (etc) I will record a result variable to keep and keep adding (or whatever) when new numbers come in. At the beginning of the program I will make result = 0 and do result = num1 + num2 + result (or whatever operators)(unless making result = 0 at the beginning breaks the multiplication or division operators then I will figure something out) If that doesn't work I may just establish result and then do result = num1 + num2 + result so nothing is in result to begin with so nothing breaks. I will figure it out :D 
